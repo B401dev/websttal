@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+/* universal selector */
+* {
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+}
+
+/* Group Selector */
+html,
+body {
+  height: 100%;
+}
+
+/* Type Selectors */
+body {
+  display: grid;
+  place-items: center;
+  background-image: url(https://images.unsplash.com/photo-1617791160505-6f00504e3519?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1400&q=80);
+  background-size: cover;
+  background-position: 0 0;
+}
+
+.welcome {
+  margin: 0 auto;
+  margin: 10vh;
+  padding: 5%;
+  border-radius: 10px;
+  position: relative;
+  z-index: 1;
+  background: inherit;
+  overflow: hidden;
+}
+
+.welcome:before {
+  content: "";
+  position: absolute;
+  background: inherit;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  box-shadow: inset 0 0 2000px rgba(255, 255, 255, 0.2);
+  filter: blur(10px);
+  margin: -20px;
+}
+
+.btn {
+  cursor: pointer;
+  margin-top: 1.5rem;
+  padding: 0.75rem 1.5rem;
+  font-size: 0.65rem;
+  font-weight: bold;
+  letter-spacing: 0.025rem;
+  text-transform: uppercase;
+  color: white;
+  background-color: #384d48;
+  border: none;
+}
+
+.btn:hover {
+  background-color: #2d2d2a;
+}
