@@ -1,10 +1,13 @@
 <?php
 
+// koneksi ke database
 $dbServername = "localhost";
 $dbUsername = "root";
 $dbPassword = "";
-$dbName = "sttal";
+$dbName = "latihan";
 
+
+// Create connection
 $conn = mysqli_connect($dbServername, $dbUsername, $dbPassword, $dbName);
 
 if ($conn->connect_error) {

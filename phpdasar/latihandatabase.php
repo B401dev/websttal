@@ -1,36 +1,5 @@
 <?php
-// koneksi ke database
-    $servername = "localhost";
-	$username = "root";
-	$password = "";
-    $database = "latihan";
-	
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $database);
-	
-	// Check connection
-	if (!$conn) {
-	  die("Connection failed: " . $conn->connect_error);
-	}
-	echo "Connected successfully";
-
-    // ambil data dari tabel myguest
-    $sql = "SELECT * FROM myguests";
-	$result = mysqli_query( $conn, $sql );
-
-    // ambil data (fetch) user dari object result
-    // mysqli_fetch_row() -> mengembalikan array numeric
-    // $usr = mysqli_fetch_row($result);
-    // var_dump($usr[1]);
-
-    // mysqli_fetch_assoc() -> mengembalikan array associative
-    // $usr = mysqli_fetch_assoc($result);
-    // var_dump($usr["firstname"]);
-
-    // mysqli_fetch_array() -> mengembalikan array associative dan numeric
-    // $usr = mysqli_fetch_array($result);
-    // var_dump($usr["firstname"]);
-    // var_dump($usr[1]);
+require_once("connect.php");
 ?>
 <!DOCTYPE html>
 <html lang="en">
