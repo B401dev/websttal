@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <link href="style.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+ 
+    <div class="slider">
+      <div class="slides">
+
+        <!-- radio button -->
+        <input type="radio" name="radio-btn" id="radio1">
+        <input type="radio" name="radio-btn" id="radio2">
+        <input type="radio" name="radio-btn" id="radio3">
+        <!-- radio button stop -->
+
+        <!-- slide image -->
+        <div class="slide first">
+          <img src="1.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="2.jpg" alt="">
+        </div>
+        <div class="slide">
+          <img src="3.jpg" alt="">
+        </div>
+        <!-- slide image end -->
+
+        <!-- automatic nav start -->
+        <div class="nav-auto">
+          <div class="auto-btn1"></div>
+          <div class="auto-btn2"></div>
+          <div class="auto-btn3"></div>
+        </div>
+        <!-- automatic nav end -->
+      </div>
+
+      <!-- manual nav start -->
+      <div class="nav-manual">
+        <label for="radio1" class="manual-btn"></label>
+        <label for="radio2" class="manual-btn"></label>
+        <label for="radio3" class="manual-btn"></label>
+      </div>
+      <!-- manual nav end -->
+      
+    </div>
+    <script type="text/javascript">
+      var counter = 1;
+      setInterval(function(){
+        // get "radio1" if checked
+        document.getElementById('radio' + counter).checked = true;
+        counter++;
+        if(counter > 3){
+          counter = 1;
+        }
+      }, 3000);
+    </script>
+  </body>
+</html>
